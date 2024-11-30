@@ -1,0 +1,19 @@
+--In LocalScript
+
+script.Parent.Main.Selectable=true
+script.Parent.Main.Draggable=true
+script.Parent.Main.Active=true
+
+script.Parent.Main.KickP.MouseButton1Click:Connect(function()
+	script.Parent.KickEvent:FireServer(script.Parent.Main.P.Text, script.Parent.Main.Reason.Text)
+end)
+
+--In Script
+
+script.Parent.KickEvent.OnServerEvent:Connect(function(p,Plr,Reason)
+	for _, Plrs in pairs(game.Players:GetPlayers()) do
+		if Plrs.Name:lower():find(string.lower(Plr)) then
+			Plrs:Kick(Reason)
+		end
+	end
+end)
