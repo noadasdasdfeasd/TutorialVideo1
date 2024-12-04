@@ -193,14 +193,25 @@ end)
 
 --Script
 script.Parent:FindFirstChild("Your RemoteEvent Name").OnServerEvent:Connect(function(LocalPlayer)
-	for _, Players in pairs(game:GetService("Players"):GetPlayers()) do
-		if Players.Name == LocalPlayer.Name then
-			for _, PlayersCharater in pairs(Players.Character:GetDescendants()) do
-				if PlayersCharater:IsA("BasePart") then
-					local Mesh = Instance.new("SpecialMesh", PlayersCharater)
-					for _, Messj in ipairs(Enum.MeshType:GetEnumItems()) do
-						Mesh.MeshType = Messj
-					end
+	local PlrC = LocalPlayer.Character:GetChildren()
+	local mesd = {"Brick","Cylinder","Head","Sphere","Torso","Wedge"}
+	local mesd2 = {"Brick","Cylinder","Head","Sphere","Torso","Wedge"}
+	for _, plrsss in pairs(PlrC) do
+		if plrsss:IsA("BasePart") then
+			if plrsss.Name == "Head" then
+				plrsss.Mesh.MeshType = mesd[math.random(1,#mesd)]
+			end
+			if plrsss.Name ~= "Head" then
+				local messhh = Instance.new("SpecialMesh", plrsss)
+				messhh.MeshType = mesd[math.random(1,#mesd)]
+			end
+		end
+	end
+	for _, plrsss in pairs(PlrC) do
+		if plrsss:IsA("Accessory") then
+			for _, a in pairs(plrsss:GetDescendants()) do
+				if a.Name == "Handle" then
+					a.Mesh.MeshType = mesd2[math.random(1,#mesd2)]
 				end
 			end
 		end
