@@ -1,0 +1,231 @@
+--This Is Made By TeamCry(I would rename it to TeamAleks but imma keep the TeamCry)
+
+decal spam = script
+--[=[====================================================================]=]--
+
+script.Parent.MouseButton1Click:Connect(function()
+	for _, Workspaces in pairs(Workspace:GetDescendants()) do
+		for _, facess in ipairs(Enum.NormalId:GetEnumItems()) do
+			local Decals = Instance.new("Decal", Workspaces)
+			Decals.Texture = "http://www.roblox.com/asset/?id=13853621129"--Decal id, if you want to use Image then use "rbxassetid://YourImageId"
+			Decals.Name = "TeamCry Decals"
+			Decals.ZIndex = 999
+			Decals.Face = facess
+		end
+	end
+end)
+--[=[====================================================================]=]--
+
+Skybox = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	game:GetService("Lighting"):ClearAllChildren()
+	local Skys = Instance.new("Sky", game:GetService("Lighting"))
+	Skys.Name = "TeamCry Skys"
+	Skys.SkyboxBk = "rbxassetid://13853621129"--Image/Decal id
+	Skys.SkyboxDn = "rbxassetid://13853621129"--Image/Decal id
+	Skys.SkyboxFt = "rbxassetid://13853621129"--Image/Decal id
+	Skys.SkyboxLf = "rbxassetid://13853621129"--Image/Decal id
+	Skys.SkyboxRt = "rbxassetid://13853621129"--Image/Decal id
+	Skys.SkyboxUp = "rbxassetid://13853621129"--Image/Decal id
+	Skys.MoonTextureId = "rbxassetid://13853621129"--Image/Decal id
+	Skys.SunTextureId = "rbxassetid://13853621129"--Image/Decal id
+end)
+--[=[====================================================================]=]--
+
+Particle(Normal) = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	for _, Particles in pairs(workspace:GetDescendants()) do
+		local Particle = Instance.new("ParticleEmitter", Particles)
+		Particle.Name = "TeamCry Particle"
+		Particle.VelocitySpread = 1000*2
+		Particle.Texture = "rbxassetid://13853621129"--Image/Decal id
+		Particle.RotSpeed = NumberRange.new(360, 360)
+	end
+end)
+--[=[====================================================================]=]--
+
+Particle(Big) = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	for _, Particles in pairs(workspace:GetDescendants()) do
+		local Particle = Instance.new("ParticleEmitter", Particles)
+		Particle.Name = "TeamCry Particle"
+		Particle.VelocitySpread = 1000*2
+		Particle.Texture = "rbxassetid://13853621129"--Image/Decal id
+		Particle.RotSpeed = NumberRange.new(360, 360)
+		Particle.Size = NumberSequence.new(10)
+		Particle.Transparency = NumberSequence.new(0.5)
+	end
+end)
+--[=[====================================================================]=]--
+
+Hint = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	local Hint = Instance.new("Hint", workspace)
+	Hint.Text = "TeamCry Is Here"--Hint text here
+	wait(1)--times
+	Hint.Text = "TeamCry Is The Sigma Lord"--Hint text here
+	wait(5)--times
+	Hint:Destroy()
+end)
+--or you can use this
+script.Parent.MouseButton1Click:Connect(function()
+	local Hint = Instance.new("Hint", workspace)
+	Hint.Text = "TeamCry Is Here"--Hint text here
+	wait(5)--times
+	Hint:Destroy()
+end)
+--[=[====================================================================]=]--
+
+Message = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	local Hint = Instance.new("Message", workspace)
+	Hint.Text = "TeamCry Is Here"--Message text here
+	wait(1)--times
+	Hint.Text = "TeamCry Is The Sigma Lord"--Message text here
+	wait(5)--times
+	Hint:Destroy()
+end)
+--or you can use this
+script.Parent.MouseButton1Click:Connect(function()
+	local Hint = Instance.new("Message", workspace)
+	Hint.Text = "TeamCry Is Here"--Message text here
+	wait(5)--times
+	Hint:Destroy()
+end)
+--[=[====================================================================]=]--
+
+Jumpscare = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	local ScreenGui = Instance.new("ScreenGui", nil)
+	ScreenGui.Name = "TeamCry Is The True Sigma Lord"
+	ScreenGui.IgnoreGuiInset = true
+	ScreenGui.ResetOnSpawn = false
+	local JumpscareImages = Instance.new("ImageLabel", ScreenGui)
+	JumpscareImages.Name = "ScaryJumpscareds"
+	JumpscareImages.Image = "rbxassetid://12220953575"--Decal/Images Id
+	JumpscareImages.Size = UDim2.new(1,0,1,0)
+	JumpscareImages.BackgroundColor3 = Color3.fromHSV(0, 0, 0.352941)
+	JumpscareImages.BorderSizePixel = 0
+	local JumpscareSound = Instance.new("Sound", JumpscareImages)
+	JumpscareSound.Name = "Spooky Sound"
+	JumpscareSound.SoundId = "rbxassetid://4810729995"--sound id
+	JumpscareSound.Volume = 999999999
+	JumpscareSound.Looped = true
+	JumpscareSound:Play()
+	for _, Players in pairs(game:GetService("Players"):GetPlayers()) do
+		local MainJumpscare = ScreenGui:Clone()
+		MainJumpscare.Parent = Players.PlayerGui
+		task.wait(7.232)--times
+		Players:FindFirstChild("PlayerGui"):FindFirstChild("TeamCry Is The True Sigma Lord"):Destroy()
+	end
+end)
+--[=[====================================================================]=]--
+
+Kill All = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	for _, KillAllss in pairs(workspace:GetDescendants()) do
+		for _, Plrs in pairs(game:GetService("Players"):GetPlayers()) do
+			if KillAllss:IsA("Humanoid") then
+				KillAllss.Health = 0
+			end
+		end
+	end
+end)
+--[=[====================================================================]=]--
+
+Kick All = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	for _, Plrss in pairs(game:GetService("Players"):GetPlayers()) do
+		Plrss:Kick("TeamCry Is Here!")
+	end
+end)
+--[=[====================================================================]=]--
+
+Random Map Color = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	for _, Rainbow in pairs(workspace:GetDescendants()) do
+		if Rainbow:IsA("BasePart") and not Rainbow:IsA("Terrain") then
+			Rainbow.BrickColor = BrickColor.random()
+		end
+	end
+end)
+--[=[====================================================================]=]--
+
+Random Avatar Color(Yourself) = LocalScript, Script, Remote Event
+--[=[====================================================================]=]--
+--LocalScript
+script.Parent.MouseButton1Click:Connect(function()
+	script.Parent:FindFirstChild("Your RemoteEvent Name"):FireServer()
+end)
+-------------
+
+--Script
+script.Parent:FindFirstChild("Your RemoteEvent Name").OnServerEvent:Connect(function(LocalPlayer)
+	for _, Players in pairs(game:GetService("Players"):GetPlayers()) do
+		if Players.Name == LocalPlayer.Name then
+			for _, PlayersCharater in pairs(Players.Character:GetDescendants()) do
+				if PlayersCharater:IsA("BasePart") or PlayersCharater:IsA("MeshPart") or PlayersCharater:IsA("CharacterMesh") then
+					PlayersCharater.BrickColor = BrickColor.random()
+				end
+			end
+		end
+	end
+end)
+--------
+--[=[====================================================================]=]--
+
+Random Mesh Avatar(Yourself) = LocalScript, Script, Remote Event
+--[=[====================================================================]=]--
+--LocalScript
+sscript.Parent.MouseButton1Click:Connect(function()
+	script.Parent:FindFirstChild("Your RemoteEvent Name"):FireServer()
+end)
+-------------
+
+--Script
+script.Parent:FindFirstChild("Your RemoteEvent Name").OnServerEvent:Connect(function(LocalPlayer)
+	for _, Players in pairs(game:GetService("Players"):GetPlayers()) do
+		if Players.Name == LocalPlayer.Name then
+			for _, PlayersCharater in pairs(Players.Character:GetDescendants()) do
+				if PlayersCharater:IsA("BasePart") then
+					local Mesh = Instance.new("SpecialMesh", PlayersCharater)
+					for _, Messj in ipairs(Enum.MeshType:GetEnumItems()) do
+						Mesh.MeshType = Messj
+					end
+				end
+			end
+		end
+	end
+end)
+--------
+--[=[====================================================================]=]--
+
+ShutDown Server = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	for _, Plrs in pairs(game:GetService("Players"):GetPlayers()) do
+		Plrs:Kick("Server Shutdown!")
+		game:GetService("Players").PlayerAdded:Connect(function(p)
+			p:Kick("Server Shutdown!")
+		end)
+	end
+end)
+--[=[====================================================================]=]--
+
+ServerLock = script
+--[=[====================================================================]=]--
+script.Parent.MouseButton1Click:Connect(function()
+	game:GetService("Players").PlayerAdded:Connect(function(p)
+		p:Kick("Nuh uh you aint getin in this server boi")
+	end)
+end)
+--[=[====================================================================]=]--
